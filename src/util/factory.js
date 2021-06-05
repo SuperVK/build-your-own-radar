@@ -209,6 +209,7 @@ const GoogleSheetInput = function () {
     if (domainName && queryParams.sheetId.endsWith('csv')) {
       sheet = CSVDocument(queryParams.sheetId)
       sheet.init().build()
+      console.log('yoooo whatt')
     } else if (domainName && domainName.endsWith('google.com') && queryParams.sheetId) {
       sheet = GoogleSheet(queryParams.sheetId, queryParams.sheetName)
       console.log(queryParams.sheetName)
@@ -395,4 +396,5 @@ function plotUnauthorizedErrorMessage () {
   })
 }
 
-module.exports = GoogleSheetInput
+module.exports = CSVDocument
+// module.exports = GoogleSheetInput
